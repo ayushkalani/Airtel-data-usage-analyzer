@@ -21,11 +21,13 @@ try:
 			days_left=str(dy[0])
 
 	sender='airtel-internet-usage@gmail.com'
-	receviers=['ayushkalanicool@gmail.com','ayush_kalani2@yahoo.co.in']
+	rec=raw_input('Enter Space Seprated recevier(s) email address:')
+
+	receviers=map(str,rec.split())
 	OGmsg='Your remaining Internet balance is :-  '+ gb_left + ' so please use it carefully . Because only ' + days_left+ ' day(s) are left !!!'
-	msg = "\r\n".join(["From: airtel-internet-usage@airtel.in","To: W307@abodevalleyResidents","Subject: Airtel Internet Usage","",OGmsg])
+	msg = "\r\n".join(["From: airtel-internet-usage@airtel.in","To: DearGuysUseItRealSlow","Subject: Airtel Internet Usage","",OGmsg])
 	
-	username=raw_input('Email (gmail only):')
+	username=raw_input('Your Email (gmail only):')
 	password=getpass.getpass('Password:')
 	server = smtplib.SMTP('smtp.gmail.com:587')
 	server.starttls()
@@ -34,4 +36,5 @@ try:
 	server.quit()
 except IOError:
 	print "Net nahi chl rha h bhai , load mat le , airtel ko call kar aur gaali de"
+
 
