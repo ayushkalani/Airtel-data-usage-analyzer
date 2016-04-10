@@ -13,4 +13,7 @@ $ * * * * * /usr/bin/python airtelemailpass.py
 ### To do 
 Daily Usage Calculator 
 Daily Usage Calculator for a month and displaying graphical report using graph.js or networkx in python  
+<<<<<<< HEAD
 
+=======
+>>>>>>> 28dfd9052f977a4f9ae948c7380726d5de389f9f
