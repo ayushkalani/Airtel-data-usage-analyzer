@@ -30,9 +30,12 @@ try:
 	username=raw_input('Your Email (gmail only):')
 	password=getpass.getpass('Password:')
 	server = smtplib.SMTP('smtp.gmail.com:587')
-	server.starttls()
-	server.login(username,password)
-	server.sendmail(sender, receviers, msg)
+	try:
+		server.starttls()
+		server.login(username,password)
+		server.sendmail(sender, receviers, msg)
+	except Exception:
+		print('Send Email failed')
 	server.quit()
 except IOError:
 	print "Net nahi chl rha h bhai , load mat le , airtel ko call kar aur gaali de"
